@@ -1,0 +1,674 @@
+
+/* General page settings */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #151b20;
+    color: white;
+}
+.togglebutton{
+     display: none;
+}
+.togglebutton span{
+    width: 2rem;
+    border: 1px solid gray;
+    margin: 0.25 rem;
+    display: block;
+}
+@media(max-width:630px){
+    .togglebutton{
+        display:block;
+        position: absolute;
+        top: 1.5rem;
+        right: 0rem;
+
+    }
+    .submenubar{
+    display: none;
+}
+.menubarcontainer:hover.submenubar{
+    display: block;
+    position: absolute;
+    right: 0rem;
+    top: 2rem;
+
+}
+.menubarcontainer:hover ul{
+    list-style-type: none;
+}
+.menubarcontainer:hover ul li a{
+    text-decoration:underline;
+    color:white;
+}
+.menubarcontainer:hover ul{
+    display: flex;
+    flex-direction: column;
+    border:0.1px solid green ;
+    background-color:blue;
+}
+}
+
+.menubarcontainer:hover.submenubar{
+    display: block;
+    position: absolute;
+    right: 0rem;
+}
+
+.menubarcontainer:hover ul li a{
+    text-decoration: underline;
+}
+.menubarcontainer:hover ul{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* Header section */
+header {
+    background-color: #151b20;
+    padding: 20px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    border-bottom: 1px solid #30363b;
+}
+.menubarcontainer{
+    display: flex;
+    justify-content: flex-end;
+}
+.menubarcontainer ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 1rem;
+
+}
+.menubarcontainer ul li{
+    padding: 10px;
+}
+.menubarcontainer ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+font-variant: small-caps;
+white-space: nowrap;
+text-transform: capitalize;
+
+}
+.logocontainer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logocontainer h1 {
+    font-size: 38px;
+    margin: 0;
+}
+
+.flagcontainer img {
+    width: 75px;
+    height: 48px;
+    object-fit: cover;
+}
+
+
+
+
+
+
+/* Home section */
+#home {
+    height: 700px;
+}
+
+.homecontainer {
+    height: 100%;
+    background-color: #263640;
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("../LastLabProject/Assets/lake.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 140px 45px;
+}
+
+.homeparagraphcontainer h1 {
+    font-size: 100px;
+    line-height: 1.05;
+    margin: 0;
+}
+
+.homeparagraphcontainer h1 span {
+    color: #f5bd60;
+}
+
+.homeparagraphcontainer p {
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.homebuttoncontainer {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.homebuttoncontainer a {
+    display: inline-block;
+    background-color: #e8ac48;
+    color: black;
+    padding: 22px 35px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.homebuttoncontainer a:hover {
+    background-color: white;
+}
+
+
+/* Latest news section */
+#news {
+    padding: 50px 35px;
+}
+
+.newsheadingcontainer {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.newsheadingcontainer h1 {
+    font-size: 35px;
+}
+
+.newsheadingcontainer p {
+    color: #cccccc;
+    font-size: 20px;
+}
+
+.newsboxcontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.newsbox {
+    background-color: #222b32;
+    border: 1px solid #394149;
+    border-radius: 22px;
+    padding: 25px;
+}
+
+.newsimagecontainer img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.newstitletcontainer h1 {
+    color: #f5ad45;
+    font-size: 25px;
+}
+
+.newsparagraphcontainer p {
+    color: #cccccc;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.newsreadmorecontainer {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.newsreadmorecontainer a {
+    display: inline-block;
+    background-color: #3c3a34;
+    color: #f5ad45;
+    border: 3px solid #292929;
+    border-radius: 35px;
+    padding: 18px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.newsreadmorecontainer a:hover {
+    background-color: #e8ac48;
+    color: black;
+}
+
+
+/* Adventures section */
+#adventures {
+    padding: 50px 35px;
+}
+
+.adventureheadingcontainer {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.adventureheadingcontainer h1 {
+    font-size: 35px;
+}
+
+.adventureheadingcontainer p {
+    color: #cccccc;
+    font-size: 20px;
+}
+
+.adventureboxlistcontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.adventureboxcontainer {
+    background-color: #222b32;
+    border: 1px solid #394149;
+    border-radius: 22px;
+    padding: 25px;
+    margin-bottom: 10px;
+}
+
+.adventureimagecontainer img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.adventurtitletcontainer h1 {
+    font-size: 25px;
+    color: #f5ad45;
+}
+
+.adventureparagraphcontainer p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #cccccc;
+}
+
+.adventurereadmorecontainer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.adventurereadmorecontainer a {
+    display: inline-block;
+    padding: 18px 30px;
+    border-radius: 35px;
+    background-color: #3c3a34;
+    border: 3px solid #292929;
+    color: #f5ad45;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.adventurereadmorecontainer a:hover {
+    background-color: #e8ac48;
+    color: black;
+}
+
+
+/* Tour packages section */
+#packages {
+    padding: 50px 35px;
+}
+
+.packageheadingcontainer {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.packageheadingcontainer h1 {
+    font-size: 35px;
+}
+
+.packageheadingcontainer p {
+    color: #cccccc;
+    font-size: 20px;
+}
+
+.packageboxlistcontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 28px;
+}
+
+.packageboxcontainer {
+    background-color: #222b32;
+    border: 1px solid #394149;
+    border-radius: 22px;
+    padding: 22px;
+}
+
+.packageimagecontainer img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.packagetitlecontainer h1 {
+    font-size: 25px;
+    color: #f5ad45;
+    text-align: center;
+}
+
+.packageparagraphcontainer p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #cccccc;
+}
+
+.packagereadmorecontainer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.packagereadmorecontainer a {
+    display: inline-block;
+    padding: 18px 30px;
+    border-radius: 35px;
+    background-color: #3c3a34;
+    border: 3px solid #292929;
+    color: #f5ad45;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.packagereadmorecontainer a:hover {
+    background-color: #e8ac48;
+    color: black;
+}
+
+
+/* Contact section */
+#contact {
+    padding: 80px 20px;
+}
+
+.contactheadingcontainer {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contactheadingcontainer h1 {
+    font-size: 50px;
+}
+
+.contactformcontainer {
+    width: 65%;
+    margin: auto;
+}
+
+.contactformcontainer form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.contactinputcontainer input {
+    width: 100%;
+    padding: 25px;
+    background-color: #222b32;
+    border: 1px solid #394149;
+    border-radius: 12px;
+    color: white;
+    font-size: 18px;
+}
+
+.contactmessagecontainer {
+    grid-column: 1 / 3;
+}
+
+.contactmessagecontainer textarea {
+    width: 100%;
+    height: 180px;
+    padding: 25px;
+    background-color: #222b32;
+    border: 1px solid #394149;
+    border-radius: 12px;
+    color: white;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+}
+
+.contactbuttoncontainer {
+    grid-column: 1 / 3;
+}
+
+.contactbuttoncontainer button {
+    background-color: #e8ac48;
+    color: black;
+    padding: 22px 35px;
+    border: none;
+    border-radius: 40px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.contactbuttoncontainer button:hover {
+    background-color: white;
+}
+
+
+/* Footer section */
+footer {
+    background-color: #101519;
+    border-top: 1px solid #30363b;
+    padding: 60px 8%;
+}
+
+.footercontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 35px;
+}
+
+.footertitlecontainer h2 {
+    color: #f5ad45;
+    text-decoration: underline;
+    font-size: 23px;
+}
+
+.footerlinkcontainer p {
+    font-size: 18px;
+    margin-top: 25px;
+}
+
+.footerlinkcontainer a {
+    color: #cccccc;
+    text-decoration: none;
+}
+
+.footerlinkcontainer a:hover {
+    color: #f5ad45;
+}
+
+.footeraddresscontainer {
+    text-align: center;
+    margin-top: 60px;
+    font-weight: bold;
+    color: #cccccc;
+}
+
+.footercopyrightcontainer {
+    text-align: center;
+    margin-top: 35px;
+    font-weight: bold;
+    color: #cccccc;
+}
+
+
+/* Smaller screens */
+@media (max-width: 700px) {
+
+    header {
+        padding: 20px;
+    }
+
+    .logocontainer h1 {
+        font-size: 28px;
+    }
+
+    .navigationcontainer {
+        gap: 12px;
+    }
+
+    .navigationcontainer a {
+        font-size: 13px;
+    }
+
+    .packageboxlistcontainer {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .homeparagraphcontainer h1 {
+        font-size: 75px;
+    }
+
+    .contactformcontainer {
+        width: 80%;
+    }
+   .news{
+    display :flex;
+    flex-direction: column;
+
+   }
+}
+
+
+/* Mobile screens */
+@media screen and (max-width: 700px) {
+
+    header {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .logocontainer h1 {
+        font-size: 25px;
+    }
+
+    .flagcontainer img {
+        width: 48px;
+        height: 32px;
+    }
+
+    .navigationcontainer {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .navigationcontainer a {
+        font-size: 13px;
+    }
+
+    #home {
+        height: 550px;
+    }
+
+    .homecontainer {
+        padding: 100px 20px;
+    }
+
+    .homeparagraphcontainer h1 {
+        font-size: 52px;
+    }
+
+    .homeparagraphcontainer p {
+        font-size: 18px;
+    }
+
+    .homebuttoncontainer {
+        text-align: left;
+    }
+
+    #news,
+    #adventures,
+    #packages {
+        padding: 30px 15px;
+    }
+
+    .newsboxcontainer {
+        grid-template-columns: 1fr;
+    }
+
+    .adventureboxlistcontainer {
+        grid-template-columns: 1fr;
+    }
+
+    .packageboxlistcontainer {
+        grid-template-columns: 1fr;
+    }
+
+    .newsimagecontainer img,
+    .adventureimagecontainer img {
+        height: 220px;
+    }
+
+    .packageimagecontainer img {
+        height: 230px;
+    }
+
+    #contact {
+        padding: 45px 15px;
+    }
+
+    .contactheadingcontainer h1 {
+        font-size: 38px;
+    }
+
+    .contactformcontainer {
+        width: 100%;
+    }
+
+    .contactformcontainer form {
+        grid-template-columns: 1fr;
+    }
+
+    .contactmessagecontainer,
+    .contactbuttoncontainer {
+        grid-column: 1;
+    }
+
+    footer {
+        padding: 30px 20px;
+    }
+
+    .footercontainer {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    .footertitlecontainer h2 {
+        font-size: 19px;
+    }
+
+    .footerlinkcontainer p {
+        font-size: 15px;
+        overflow-wrap: anywhere;
+    }
+
+    .footeraddresscontainer {
+        margin-top: 35px;
+    }
+}
